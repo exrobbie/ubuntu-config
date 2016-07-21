@@ -24,12 +24,18 @@ To solve this problem, run
 sudo chown root /usr/local/bin/brew
 ```
 
-## Express
+## [Express](https://expressjs.com)
 
 Using scaffold
 
-```javascript
+```shell
 npm install -g express-generator
 express $project
+```
+
+Normally setup
+
+```shell
+npm install --save express
 ```
 
