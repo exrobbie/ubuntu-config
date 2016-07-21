@@ -24,5 +24,12 @@ To solve this problem, run
 sudo chown root /usr/local/bin/brew
 ```
 
+## Express
 
+Using scaffold
+
+```javascript
+npm install -g express-generator
+express $project
+```
 
