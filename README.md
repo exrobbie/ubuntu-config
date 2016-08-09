@@ -39,3 +39,14 @@ Normally setup
 npm install --save express
 ```
 
+## Python packages
+
+### [mysql-connector-python](https://github.com/mysql/mysql-connector-python/blob/master/setup.py)
+
+```shell
+git clone https://github.com/mysql/mysql-connector-python.git
+cd $directory
+python ./setup.py build
+sudo python ./setup.py install
+```
+
