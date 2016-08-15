@@ -1,0 +1,2 @@
+# insConfig for Win
+
