@@ -1,8 +1,19 @@
 # insConfig
 Record every step it requires to install and config softwares. Ubuntu 16.04 would be the default system environment.
 
+## nginx
 
-## [Express](https://expressjs.com)
+```shell
+apt install nginx
+```
+
+## Node.js
+
+```shell
+apt install nodejs  //version 4.2.6
+```
+
+### [Express](https://expressjs.com)
 
 Using scaffold
 
@@ -17,17 +28,65 @@ Normally setup
 npm install --save express
 ```
 
-## Python packages
+## Python
 
-Gathering the ways to instll python packages.
+Python2 is not shipped with ubuntu 16.04
 
-## MYSQLdb
+```shell
+apt install python
+apt install python-pip
+```
+
+If you would like to reinstall python3
+
+```shell
+apt install python3
+apt install python3-pip
+```
+
+Pip would be automatically linked with pip3 after upgrading it by typing
+
+```shell
+pip3 install --upgrade pip
+```
+
+To solve this problem, run
+
+```shell
+pip2 install --upgrade --force-reinstall pip
+```
+
+### Python packages
+
+Gathering the ways to install python packages.
+
+#### Virtualenv
+
+```shell
+pip install virtualenv
+```
+
+usage
+
+```python
+virtualenv ENV
+source ENV/bin/activate
+```
+
+To install different python
+
+```shell
+python -m virtualenv ENV
+python3 -m virtualenv ENV
+```
+
+#### MYSQLdb
 
 ```shell
 pip install MYSQL-python
 ```
 
-### [mysql-connector-python](https://github.com/mysql/mysql-connector-python/blob/master/setup.py)
+#### [mysql-connector-python](https://github.com/mysql/mysql-connector-python/blob/master/setup.py)
 
 ```shell
 git clone https://github.com/mysql/mysql-connector-python.git
