@@ -1,11 +1,37 @@
 # insConfig
 Record every step it requires to install and config softwares. Ubuntu 16.04 would be the default system environment.
 
-## nginx
+## [nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
 
 ```shell
 apt install nginx
 ```
+
+Adjust firewall
+
+```shell
+ufw app list // Get a list of profiles
+ufw allow $app //enable an app
+ufw status //verify the change
+```
+
+Make sure nginx is running
+```shell
+systemctl status nginx
+```
+
+Manage Nginx Process
+```shell
+systemctl start nginx //start
+systemctl stop nginx //stop
+systemctl restart nginx //restart
+systemctl reload nginx //reload without dropping connections
+
+systemctl disabled nginx //prevent Nginx from start automatically when the server boots
+systemctl enable nginx //enable Ningx to start automatically when the server boots
+```
+
+
 
 ## Node.js
 
@@ -93,5 +119,19 @@ git clone https://github.com/mysql/mysql-connector-python.git
 cd $directory
 python ./setup.py build
 sudo python ./setup.py install
+```
+
+## MySQL
+
+install
+
+```shell
+apt install mysql-server
+```
+
+config secure policy
+
+```shell
+mysql_secure_installation
 ```
 
