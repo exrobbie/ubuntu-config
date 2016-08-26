@@ -135,3 +135,37 @@ config secure policy
 mysql_secure_installation
 ```
 
+start the shell
+
+```shell
+mysql -u root -p
+```
+
+
+
+## MongoDB
+
+install
+
+```shell
+apt install mongodb-org
+```
+
+
+
+## [Shadowsocks](https://github.com/shadowsocks/shadowsocks/wiki)
+
+```shell
+pip install shadowsocks
+// run pip install -U setuptools if it fails to install shadowsocks
+```
+Run shadowsocks
+- command line only
+```shell
+ssserver -p $port -k $password -m aes-256-cfb --user nobody -d start
+```
+- With configration file
+```shell
+ssserver -c /etc/shadowsocks.json -d start|stop|restart
+
+```
