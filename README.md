@@ -145,13 +145,55 @@ mysql -u root -p
 
 ## MongoDB
 
-install
+Source: [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04), [Official Site](https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/)
+
+1. Add the MongoDB Repository
 
 ```shell
-apt install mongodb-org
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 ```
 
+2. Create a list file in "/etc/apt" for MongoDB
 
+```shell
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+```
+
+3. Update the packages list after creating a specific MongoDB list
+
+```shell
+apt update
+```
+
+4. Install the MongoDB package
+
+```shell
+apt install -y mongodb-org
+```
+
+5. Create a file named mongodb.service in "/etc/systemd/system/" and past the following
+
+```shell
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+
+[Service]
+User=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+```
+
+6. Enable automatically starting MongoDB when the system starts
+
+```shell
+systemctl enable mongodb
+```
+
+7. Disable Transparent Huge Pages (THP) [Official site](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/#transparent-huge-pages-thp-settings)
+8. Never forget to **restart the MongoDB** service once there are changes on configuration.
 
 ## [Shadowsocks](https://github.com/shadowsocks/shadowsocks/wiki)
 
