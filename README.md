@@ -1,6 +1,11 @@
 # insConfig
 Record every step it requires to install and config softwares. Ubuntu 16.04 would be the default system environment.
 
+## Shadowsocks
+```shell
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+```
+
 ## [nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
 
 ```shell
@@ -33,7 +38,10 @@ systemctl enable nginx //enable Ningx to start automatically when the server boo
 
 ## Git
 ```shell
-apt install git-all
+apt install git
+
+# For additional sub components
+apt install git-all 
 ```
 
 ## Node.js
