@@ -31,12 +31,24 @@ systemctl disabled nginx //prevent Nginx from start automatically when the serve
 systemctl enable nginx //enable Ningx to start automatically when the server boots
 ```
 
-
+## Git
+```shell
+apt install git-all
+```
 
 ## Node.js
 
 ```shell
 apt install nodejs  //version 4.2.6
+```
+
+### [nvm](https://github.com/creationix/nvm)
+```shell
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+```
+### [pm2](https://github.com/Unitech/pm2)
+```shell
+npm i -g pm2
 ```
 
 ### [Express](https://expressjs.com)
