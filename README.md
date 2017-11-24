@@ -6,18 +6,22 @@ Record every step it requires to install and config softwares. Ubuntu 16.04 woul
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 ```
 
-Adjust UFW(firewall)
+## Adjust UFW(firewall)
 
 ```shell
-#start ufw
+# start ufw
 ufw enable
-#stop ufw
+
+# stop ufw
 ufw disable
-#Get app list
+
+# Get app list
 ufw app list
-#Enable an app named foo
+
+# Enable an app named foo
 ufw allow foo
-#Check status
+
+# Check status
 ufw status
 ```
 
@@ -45,9 +49,10 @@ systemctl enable nginx //enable Ningx to start automatically when the server boo
 
 ## Git
 ```shell
+# Git core 
 apt install git
 
-# For additional sub components
+# Git with sub packages
 apt install git-all 
 ```
 
