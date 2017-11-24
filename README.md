@@ -6,18 +6,25 @@ Record every step it requires to install and config softwares. Ubuntu 16.04 woul
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 ```
 
+Adjust UFW(firewall)
+
+```shell
+#start ufw
+ufw enable
+#stop ufw
+ufw disable
+#Get app list
+ufw app list
+#Enable an app named foo
+ufw allow foo
+#Check status
+ufw status
+```
+
 ## [nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04)
 
 ```shell
 apt install nginx
-```
-
-Adjust firewall
-
-```shell
-ufw app list // Get a list of profiles
-ufw allow $app //enable an app
-ufw status //verify the change
 ```
 
 Make sure nginx is running
@@ -32,7 +39,7 @@ systemctl stop nginx //stop
 systemctl restart nginx //restart
 systemctl reload nginx //reload without dropping connections
 
-systemctl disabled nginx //prevent Nginx from start automatically when the server boots
+systemctl disable nginx //prevent Nginx from start automatically when the server boots
 systemctl enable nginx //enable Ningx to start automatically when the server boots
 ```
 
