@@ -1,11 +1,6 @@
 # insConfig
 Record every step it requires to install and config softwares. Ubuntu 16.04 would be the default system environment.
 
-## Shadowsocks
-```shell
-pip install git+https://github.com/shadowsocks/shadowsocks.git@master
-```
-
 ## Adjust UFW(firewall)
 
 ```shell
@@ -231,8 +226,7 @@ systemctl enable mongodb
 ## [Shadowsocks](https://github.com/shadowsocks/shadowsocks/wiki)
 
 ```shell
-pip install shadowsocks
-// run pip install -U setuptools if it fails to install shadowsocks
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 ```
 Run shadowsocks
 - command line only
