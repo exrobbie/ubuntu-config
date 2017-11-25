@@ -154,7 +154,7 @@ python ./setup.py build
 sudo python ./setup.py install
 ```
 
-## MySQL
+## MySQL 5.7
 
 install
 
@@ -176,20 +176,20 @@ mysql -u root -p
 
 
 
-## MongoDB
+## MongoDB 3.4
 
-Source: [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04), [Official Site](https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/)
+Source: [Official Site](https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/)
 
 1. Add the MongoDB Repository
 
 ```shell
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
 2. Create a list file in "/etc/apt" for MongoDB
 
 ```shell
-echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb [ arch=amd64,arm64,ppc64el,s390x ] http://repo.mongodb.com/apt/ubuntu xenial/mongodb-enterprise/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list
 ```
 
 3. Update the packages list after creating a specific MongoDB list
@@ -201,7 +201,7 @@ apt update
 4. Install the MongoDB package
 
 ```shell
-apt install -y mongodb-org
+apt install -y mongodb-enterprise
 ```
 
 5. Create a file named mongodb.service in "/etc/systemd/system/" and past the following
