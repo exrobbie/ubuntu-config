@@ -59,9 +59,10 @@ apt install git-all
 ## Node.js
 
 ```shell
-apt install nodejs  //version 4.2.6
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
-
+Nvm is recommanded to run Node.js applications
 ### [nvm](https://github.com/creationix/nvm)
 ```shell
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
